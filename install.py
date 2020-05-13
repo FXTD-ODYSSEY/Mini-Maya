@@ -118,15 +118,15 @@ def TK_GUI():
     group1.grid(row=1, column=0, columnspan=1, padx=10, pady=10, sticky=E+W)
 
     btn_3 = Button(group1,text = "Install",width=80,command=lambda: install(master_window,e1,e2)) 
-    btn_3.grid(padx=10, pady=10,sticky=E+W) 
+    btn_3.pack(padx=10, pady=10,side="top",expand=1,fill="x") 
 
     master_window.columnconfigure(0, weight=1)
     master_window.rowconfigure(1, weight=1)
     
-    group.rowconfigure(0, weight=1)
-    group.columnconfigure(0, weight=1)
-    group1.rowconfigure(0, weight=1)
-    group1.columnconfigure(0, weight=1)
+    # group.rowconfigure(0, weight=1)
+    group.columnconfigure(1, weight=1)
+    # group1.rowconfigure(0, weight=1)
+    group1.columnconfigure(1, weight=1)
 
     mainloop()
 
